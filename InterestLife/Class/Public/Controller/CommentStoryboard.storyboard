@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cc2-Ip-8nm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Comment View Controller-->
+        <scene sceneID="VFr-Hp-FoC">
+            <objects>
+                <viewController id="cc2-Ip-8nm" customClass="ZXCommentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xlJ-Tv-lfb"/>
+                        <viewControllerLayoutGuide type="bottom" id="jkg-fr-clp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ibi-t3-RVi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoj-wM-RND" userLabel="navBar" customClass="ZXTopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2R4-3n-IDu"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ExE-UD-45i">
+                                <rect key="frame" x="0.0" y="44" width="600" height="507"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jkg-fr-clp" firstAttribute="top" secondItem="ExE-UD-45i" secondAttribute="bottom" constant="49" id="DON-Tk-hlZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ExE-UD-45i" secondAttribute="trailing" id="GuK-iw-NFS"/>
+                            <constraint firstItem="Yoj-wM-RND" firstAttribute="leading" secondItem="Ibi-t3-RVi" secondAttribute="leading" id="QD5-2p-pUv"/>
+                            <constraint firstAttribute="trailing" secondItem="Yoj-wM-RND" secondAttribute="trailing" id="Y2a-B8-Vg1"/>
+                            <constraint firstItem="Yoj-wM-RND" firstAttribute="top" secondItem="Ibi-t3-RVi" secondAttribute="top" id="jgK-DQ-bcZ"/>
+                            <constraint firstItem="ExE-UD-45i" firstAttribute="top" secondItem="Yoj-wM-RND" secondAttribute="bottom" id="rCw-ER-G11"/>
+                            <constraint firstItem="ExE-UD-45i" firstAttribute="leading" secondItem="Ibi-t3-RVi" secondAttribute="leading" id="yS6-9G-XRb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="Yoj-wM-RND" id="Q1f-bn-QnY"/>
+                        <outlet property="tableView" destination="ExE-UD-45i" id="0hd-zJ-mI4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGu-x1-g0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="282"/>
+        </scene>
+    </scenes>
+</document>

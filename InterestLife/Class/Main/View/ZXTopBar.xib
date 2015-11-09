@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZXTopBar">
+            <connections>
+                <outlet property="contentView" destination="U1u-SM-tZc" id="W3R-wr-wWe"/>
+                <outlet property="leftButton" destination="N6f-S1-VGa" id="1Wo-yL-iCU"/>
+                <outlet property="nowTime" destination="VXf-OW-T8m" id="fLJ-k7-2gB"/>
+                <outlet property="rightButton" destination="J70-MY-7EV" id="u2j-qy-kZ3"/>
+                <outlet property="titleLabel" destination="nnB-uf-5I5" id="1Q0-jO-LML"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1u-SM-tZc" userLabel="contentView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生活有意思" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnB-uf-5I5">
+                            <rect key="frame" x="145" y="6" width="85" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXf-OW-T8m">
+                            <rect key="frame" x="145" y="29.5" width="85" height="11"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="85" id="ZJj-Ow-IR5"/>
+                                <constraint firstAttribute="height" constant="11" id="zeQ-1g-7mR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="7" maxY="0.0"/>
+                            <state key="normal" title="10:40" image="icon_time">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J70-MY-7EV">
+                            <rect key="frame" x="337" y="7" width="30" height="30"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6f-S1-VGa">
+                            <rect key="frame" x="8" y="7" width="30" height="30"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="J70-MY-7EV" firstAttribute="centerY" secondItem="N6f-S1-VGa" secondAttribute="centerY" id="1q1-hI-4j3"/>
+                        <constraint firstItem="N6f-S1-VGa" firstAttribute="leading" secondItem="U1u-SM-tZc" secondAttribute="leading" constant="8" id="2z8-tt-HxC"/>
+                        <constraint firstItem="VXf-OW-T8m" firstAttribute="centerX" secondItem="U1u-SM-tZc" secondAttribute="centerX" id="8UN-dW-17L"/>
+                        <constraint firstItem="VXf-OW-T8m" firstAttribute="top" secondItem="nnB-uf-5I5" secondAttribute="bottom" constant="3" id="Nzd-OC-RVA"/>
+                        <constraint firstAttribute="trailing" secondItem="J70-MY-7EV" secondAttribute="trailing" constant="8" id="PQd-OD-tTZ"/>
+                        <constraint firstItem="nnB-uf-5I5" firstAttribute="centerX" secondItem="U1u-SM-tZc" secondAttribute="centerX" id="QV2-zl-gfO"/>
+                        <constraint firstAttribute="bottom" secondItem="J70-MY-7EV" secondAttribute="bottom" constant="7" id="Rty-ff-xat"/>
+                        <constraint firstItem="nnB-uf-5I5" firstAttribute="top" secondItem="U1u-SM-tZc" secondAttribute="top" constant="6" id="TLP-Bw-KmK"/>
+                        <constraint firstItem="J70-MY-7EV" firstAttribute="top" secondItem="U1u-SM-tZc" secondAttribute="top" constant="7" id="smI-Ir-RCb"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="layer.contents" value="bg_top_bar"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="U1u-SM-tZc" secondAttribute="trailing" id="Ayf-f5-TiO"/>
+                <constraint firstAttribute="bottom" secondItem="U1u-SM-tZc" secondAttribute="bottom" id="I0x-pz-q4Y"/>
+                <constraint firstItem="U1u-SM-tZc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aC4-uW-H3w"/>
+                <constraint firstItem="U1u-SM-tZc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mLP-ED-Cla"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="279.5" y="301"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_top_bar" width="320" height="46"/>
+        <image name="icon_time" width="10" height="10"/>
+    </resources>
+</document>
